@@ -1,0 +1,6 @@
+{:project-id "cleanx"
+ :parent     nil
+ :language   :clojure
+ :tags       ["security" "audit" "secrets" "opsec"]
+ :summary    "Local opsec auditor: secret scanning, permission audit, AI-data wipe." 
+ :carto {:source-roots ["dev" "resources" "src" "test"]}}

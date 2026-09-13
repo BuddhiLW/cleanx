@@ -1,0 +1,22 @@
+{:paths ["src" "resources"]
+
+ :tasks
+ {:requires ([babashka.process :refer [shell]])
+
+  scan   {:doc  "cleanx scan [PATH] [--out FILE] [--format md|json]"
+          :task (apply shell "clojure" "-M" "-m" "cleanx.core" "scan" *command-line-args*)}
+
+  report {:doc  "cleanx report --from FILE [--format md|json]"
+          :task (apply shell "clojure" "-M" "-m" "cleanx.core" "report" *command-line-args*)}
+
+  wipe   {:doc  "cleanx wipe [TOOL...] [--apply] [--no-backup] [--backup-dir DIR]"
+          :task (apply shell "clojure" "-M" "-m" "cleanx.core" "wipe" *command-line-args*)}
+
+  test   {:doc  "Run test suite"
+          :task (shell "clojure" "-M:test")}
+
+  repl   {:doc  "Start nREPL on :7921"
+          :task (shell "clojure" "-M:nrepl" "--port" "7921")}
+
+  lint   {:doc  "clj-kondo lint"
+          :task (shell "clj-kondo" "--lint" "src" "test")}}}

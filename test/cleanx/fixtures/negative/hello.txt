@@ -1,0 +1,3 @@
+This file contains no secrets.
+Just some lorem ipsum dolor sit amet.
+A number: 12345. An email: user@example.com.

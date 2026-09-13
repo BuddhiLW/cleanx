@@ -1,0 +1,12 @@
+cleanx vendors rule data from the gitleaks project.
+
+Source:      https://github.com/gitleaks/gitleaks
+Path:        config/gitleaks.toml
+Commit:      8863af47d64c3681422523e36837957c74d4af4b
+Fetched:     2026-04-12
+License:     MIT (see ./LICENSE)
+
+Only rule data (patterns, descriptions, allowlists) is reused. No code is
+copied. Detection is reimplemented in Clojure.
+
+Upstream attribution: Copyright (c) 2019 Zachary Rice and contributors.
